@@ -40,14 +40,16 @@ int main() {
 
             case 2:
                 // Cast a vote for a candidate
+                do{
                 printf("Enter your USN :1SI21CS ");
                 scanf("%d", &voter_id);
-
-                if (voter_id < 1 || voter_id > 130) {
-                    printf("Error: Invalid voter ID.\n");
+                
+                if (voter_id < 1 || voter_id > 30) {
+                    printf("Error: Enter a valid USN ID.\n");
                 }else{
                     cast_vote(&head, &voter_head, voter_id);
                 }
+                }while(voter_id < 1 || voter_id > 30);
                 break;
 
             case 3:
@@ -57,7 +59,7 @@ int main() {
                 if(strcmp(password, "Password") == 0){
                     display_results(head);
                 }else{
-                    printf("you do not have persmission to access this option\n");
+                    printf("You do not have persmission to access this option\n");
                 }
                 break;
                 
