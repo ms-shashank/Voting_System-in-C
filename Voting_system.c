@@ -43,7 +43,7 @@ int main() {
                 do{
                 printf("Enter your USN :1SI21CS ");
                 scanf("%d", &voter_id);
-                
+                //Casting a vote for specific range from  1 to 30 more than will be prompted again
                 if (voter_id < 1 || voter_id > 30) {
                     printf("Error: Enter a valid USN ID.\n");
                 }else{
@@ -54,9 +54,9 @@ int main() {
 
             case 3:
                 // Display the current results of the election
-                printf("Enter you password :\n");
+                printf("Enter you password :\n");  // Setting a passcode, so that only the owner can access 
                 scanf("%s", password);
-                if(strcmp(password, "Password") == 0){
+                if(strcmp(password, "Password") == 0){  // Comparing the entered String with the setted password here its "Password" 
                     display_results(head);
                 }else{
                     printf("You do not have persmission to access this option\n");
