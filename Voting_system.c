@@ -56,10 +56,10 @@ int main() {
                 // Display the current results of the election
                 printf("Enter you password :\n");  // Setting a passcode, so that only the owner can access 
                 scanf("%s", password);
-                if(strcmp(password, "Password") == 0){  // Comparing the entered String with the setted password here its "Password" 
+                if(strcmp(password, "Password") == 0){  // Comparing the entered String with the entered password,  for the current program  its "Password" 
                     display_results(head);
                 }else{
-                    printf("You do not have persmission to access this option\n");
+                    printf("You do not have persmission to access this option\n");  //returning "only admins can access"
                 }
                 break;
                 
